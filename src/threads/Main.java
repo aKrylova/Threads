@@ -1,10 +1,19 @@
 package threads;
 import java.util.Scanner;
 
-/**
- *
- * @author ersv
+/*
+
+Задание 8. Thread.
+Реализовать класс ParallelMatrixProduct для многопоточного умножения матриц UsualMatrix.
+В конструкторе класс получает число потоков, которые будут использованы для перемножения
+(число потоков может быть меньше, чем число строк у первой матрицы).
+
+В функции main сравнить время перемножения больших случайных матриц обычным и многопоточным способом.
+Получить текущее время можно с помощью методов класса System.
+
  */
+
+//TODO: lab8
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
@@ -12,57 +21,6 @@ public class Main {
         UsualMatrix matrix2 = new UsualMatrix(4,4);
         UsualMatrix matrix3 = new UsualMatrix(3,2);
         UsualMatrix matrix4 = new UsualMatrix(2,4);
-        
-        matrix1.setElement(0, 0, 2);
-        matrix1.setElement(0, 1, 0);
-        matrix1.setElement(0, 2, -5);
-        matrix1.setElement(0, 3, 1);
-        matrix1.setElement(1, 0, 7);
-        matrix1.setElement(1, 1, 1);
-        matrix1.setElement(1, 2, -1);
-        matrix1.setElement(1, 3, 2);
-        matrix1.setElement(2, 0, 5);
-        matrix1.setElement(2, 1, 5);
-        matrix1.setElement(2, 2, 1);
-        matrix1.setElement(2, 3, -2);
-        matrix1.setElement(3, 0, 8);
-        matrix1.setElement(3, 1, 1);
-        matrix1.setElement(3, 2, 1);
-        matrix1.setElement(3, 3, 0);
-        
-        matrix2.setElement(0, 0, 3);
-        matrix2.setElement(0, 1, 0);
-        matrix2.setElement(0, 2, -1);
-        matrix2.setElement(0, 3, 2);
-        matrix2.setElement(1, 0, -5);
-        matrix2.setElement(1, 1, 6);
-        matrix2.setElement(1, 2, 1);
-        matrix2.setElement(1, 3, -2);
-        matrix2.setElement(2, 0, 0);
-        matrix2.setElement(2, 1, 1);
-        matrix2.setElement(2, 2, 3);
-        matrix2.setElement(2, 3, 1);
-        matrix2.setElement(3, 0, 0);
-        matrix2.setElement(3, 1, 3);
-        matrix2.setElement(3, 2, 4);
-        matrix2.setElement(3, 3, 3);
-        
-        matrix3.setElement(0, 0, 0);
-        matrix3.setElement(0, 1, 1);
-        matrix3.setElement(1, 0, 2);
-        matrix3.setElement(1, 1, 1);
-        matrix3.setElement(2, 0, -1);
-        matrix3.setElement(2, 1, 3);
-        
-        matrix4.setElement(0, 0, 0);
-        matrix4.setElement(0, 1, 1);
-        matrix4.setElement(0, 2, 0);
-        matrix4.setElement(0, 3, 1);
-        matrix4.setElement(1, 0, 3);
-        matrix4.setElement(1, 1, -1);
-        matrix4.setElement(1, 2, 0);
-        matrix4.setElement(1, 3, -2);
-
         
         Scanner in = new Scanner(System.in);
         System.out.print("Input count threads:");
@@ -85,8 +43,7 @@ public class Main {
             
             UsualMatrix result3 = coordinator2.startProduct();
             System.out.println(result3);
-            
-            
+
         }
         catch(RuntimeException ex){
             ex.getMessage();

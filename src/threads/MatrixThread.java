@@ -1,10 +1,7 @@
-
 package threads;
+
 import java.lang.Thread;
-/**
- *
- * @author ersv
- */
+
 public class MatrixThread extends Thread{
     UsualMatrix mtr1;
     UsualMatrix mtr2;

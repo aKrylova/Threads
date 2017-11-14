@@ -3,10 +3,6 @@ package threads;
 
 import java.util.Random;
 
-/**
- *
- * @author ersv
- */
 public class UsualMatrix {
     private int[][] matrix;
     private int row;
@@ -19,7 +15,7 @@ public class UsualMatrix {
 	col = c;
 	for(int i = 0; i < row; i++)
             for(int j = 0; j < col; j++)
-                matrix[i][j] = 0;//random.nextInt();
+                matrix[i][j] = random.nextInt();
     }
 
     public void setElement(int r, int c, int value){

@@ -1,10 +1,5 @@
-
 package threads;
 
-/**
- *
- * @author ersv
- */
 public class ParallelMatrixProduct {
    private UsualMatrix m1;
    private UsualMatrix m2;
@@ -44,7 +39,7 @@ public class ParallelMatrixProduct {
            res = thr[i].getResult();
        }
        long l2 = System.currentTimeMillis();
-       System.out.println("time matrix product (threads) = " + (l2 - l));
+       System.out.println("время произведения матриц (мнопоточ.) = " + (l2 - l));
         
        return res;
    } 
